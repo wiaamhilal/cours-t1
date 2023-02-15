@@ -1,0 +1,317 @@
+/*variables*/
+:root {
+    --main-color:rgb(43, 0, 99);
+}
+.spacial-heading {
+    font-size: 100px;
+    margin: 0;
+    font-weight: 800;
+    padding-top: 30px;
+    color: #ebd2d2;
+    letter-spacing: -3px;
+    text-align: center;
+}
+.spacial-heading + p {
+    margin: -30 0 0;
+    text-align: center;
+    color: #d4c4c4;
+    font-size: 20px;
+}
+@media (max-width:767px) {
+    .spacial-heading {
+        font-size: 60px;
+    }
+}
+
+/*global rules*/
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Work Sans', sans-serif;
+}
+
+/*start header*/
+.header {
+    padding-right: 20px;
+    padding-left: 20px;
+    background-color: #7e72ee;  
+}
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header i {
+    font-size: 45px;
+    padding-bottom: 3px;
+    color: var(--main-color);
+    padding-top: 2px;
+}
+.header .links {
+    position: relative;
+}
+.header .links .icon:hover span:nth-child(2) {
+    width: 100%;
+}
+.header .links .icon {
+    width: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+.header .links .icon span {
+    height: 2px;
+    background-color: black;
+    margin-bottom: 5px;
+}
+.header .links .icon span:first-child {
+    width: 100%;
+}
+.header .links .icon span:nth-child(2) {
+    width: 60%;
+    transition: 0.3s;
+}
+.header .links .icon span:last-child {
+    width: 100%;
+}
+.header .links ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: absolute;
+    right: 0px;
+    min-width: 200px;
+    top: calc(100% + 15px);
+    z-index: 1;
+    display: none;
+}
+.header .links ul::before{
+    content: "";
+    border-color: transparent transparent grey transparent;
+    border-style: solid;
+    border-width: 10px;
+    position: absolute;
+    right: 10%;
+    top: -20px;
+}
+.header .links:hover ul {
+    display: block;
+}
+
+.header .links ul li a {
+    text-decoration: none;
+    color: #777;
+    display: block;
+    padding: 20px;
+    font-size: 20px;
+    transition: 0.3s;
+}
+.header .links ul li a:hover {
+    padding: 25px;
+}
+.header .links ul li:not(:last-child) a {
+    border-bottom: 1px #ad5454 solid;
+}
+/*end header*/
+
+/*start landing secrion*/
+.landing {
+    background-image: url(https://www.freecodecamp.org/news/content/images/size/w2000/2022/09/jonatan-pie-3l3RwQdHRHg-unsplash.jpg);
+    background-size: cover;
+    height: calc(100vh - 50px);
+    position: relative;
+}
+.landing .text {
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    max-width: 100%;
+    width: 320px;
+}
+
+.landing .text h1 {
+    font-weight: bold;
+    font-size: 50px;
+    color: var(--main-color)
+}
+.landing .text p {
+    font-size: 19px;
+    line-height: 1.8;
+}
+/*start featurs secotion*/
+.featurs {
+    padding-top: 60px;
+    padding-bottom: 6px;
+    background-color: #eee;
+}
+.featurs .container {
+    display: grid;
+    grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
+    grid-gap: 20px;
+}
+.featurs .feat {
+    padding: 10px;
+    text-align: center;
+}
+.featurs i {
+    font-size: 30px;
+    color: var(--main-color);
+}
+.featurs h2 {
+    font-weight: 800;
+    margin: 30px 0;
+}
+.featurs p {
+    line-height: 1.8;
+    font-size: 18px;
+    color: darkslategrey;
+}
+/*start services*/
+.services {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #eee;
+}
+.services .services-cont {
+    display: grid;
+    grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
+    grid-gap: 40px;
+
+} 
+.services .services-cont .image img {
+    width: 260px;
+    height: 350px;
+}
+@media (max-width:1199px) {
+    .services .services-cont .image{ 
+        display: none;
+    }
+}
+.services .services-cont .serv {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+@media (max-width:767px) {
+    .services .services-cont .serv {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+.services .services-cont i {
+    font-size: 30px;
+    color: var(--main-color);
+}
+.services .services-cont h3 {
+    margin: 0;
+}
+.services .services-cont p {
+    line-height: 1.8;
+}
+.services .services-cont .text {
+    flex: 1;
+}
+.container {
+    max-width: 1000px;
+    margin: auto;
+}
+.services .services-cont .image {
+    position: relative;
+}
+.services .services-cont .image::before {
+    content: "";
+    position: absolute;
+    width: 60px;
+    background-color:(var(--main-color));
+    height: calc(100% + 60px);
+    top: -30px;
+    right: 0px;
+}
+.portfolio {
+    padding-top: 60px;
+    padding-top: 60px;
+    background-color: #eee;
+}
+.portfolio .port-cont {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    grid-gap: 20px;
+}
+.portfolio .port-cont img {
+    max-width: 100%;
+}
+.portfolio .port-cont h3 {
+    margin: 0;
+}
+.portfolio .port-cont p {
+    line-height: 1.8;
+}
+.portfolio .port-cont .part {
+    background-color: #eccdcd;
+}
+.port-text {
+    padding: 20px;
+}
+/*start about*/
+.about {
+    background-color: #eee;
+    padding-top: 60px;
+}
+.about .about-cont {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-bottom: 60px;
+}
+.about .about-cont .image {
+    width: 250px;
+    height: 375;
+    position: relative;
+}
+.about .about-cont img {
+    width: 250px;
+    height: 375px;
+}
+@media (max-width:767px) {
+    .about .about-cont {
+        text-align: center;
+    }
+    hr {
+        margin: auto;
+    }
+}
+@media (max-width:767px) {
+.about .about-cont .image {
+    margin: 0 auto 60px;
+}
+.about .about-cont .text {
+    margin: 0 auto 30px;
+}
+.about .about-cont {
+    flex-direction: column;
+}
+
+}
+
+.about .about-cont .text {
+    max-width: 500px;
+    padding-bottom: 60px;
+    
+}
+.about .about-cont p {
+    line-height: 1.8;
+}
+.about .about-cont p:first-of-type {
+    font-weight: bold;
+}
+.about .about-cont hr {
+    border-color: var(--main-color);
+    width: 70%;
+    margin: 0;
+    display: inline-block;
+}
